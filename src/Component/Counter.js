@@ -5,7 +5,7 @@ export const Counter = () => {
     const [word, setWord] = useState(0);
 
     const countWord = (e) => {
-        const words = e.target.value.split(' ');
+        const words = e.target.value.split(/[\s,]+/);
         setWord(words.filter(word => word !== '').length);
     }
 
